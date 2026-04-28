@@ -130,7 +130,7 @@
             🏆 Kỷ lục: <span id="best-score-value">0</span> điểm
           </div>
           <div class="header-title w3-center" style="margin-top: 2%">
-            🎮 QUIZ HẢI PHÒNG
+            🎮 QUIZ THÀNH PHỐ HẢI PHÒNG
           </div>
           <div class="header-sub">Kiến thức – Văn hóa – Lịch sử quê hương</div>
           <div class="button-group">
@@ -139,7 +139,7 @@
               class="neon-btn neon-box1 buu"
               onclick="goWeb()"
             >
-              🏠 VỀ HẢI PHÒNG
+              🏠 VỀ THÀNH PHỐ HẢI PHÒNG
             </button>
             <script>
               function goWeb() {
@@ -627,7 +627,7 @@
         playFinishSound();
         stopAllMusic();
         document.querySelectorAll('[id^="sound-btn"]').forEach((btn) => {
-          btn.style.display = "none";
+          btn.classList.add("sound-btn-hidden");
         });
         document.getElementById("timer").style.display = "none";
         document.getElementById("progress").style.display = "none";
@@ -764,7 +764,7 @@
         document.getElementById("hud-wrong").innerText = "0";
         document.querySelector(".mobile-hud").style.display = "flex";
         document.querySelectorAll('[id^="sound-btn"]').forEach((btn) => {
-          btn.style.display = "inline-block";
+          btn.classList.remove("sound-btn-hidden");
         });
         const timerEl = document.getElementById("timer");
         timerEl.classList.remove("shake", "danger");
@@ -1290,7 +1290,7 @@
           emoji = "💪";
         }
         const text = `
-🎮 QUIZ HẢI PHÒNG 🎮
+🎮 QUIZ THÀNH PHỐ HẢI PHÒNG 🎮
 🏆 Điểm: ${score}
 ✅ Số câu đúng: ${correctCount}/${total}
 ❌ Số câu sai: ${wrongCount}
